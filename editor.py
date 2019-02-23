@@ -5,12 +5,12 @@ from collections import namedtuple
 Size = namedtuple('Size', ['width', 'height'])
 
 tile_size = Size(width = 10, height = 20)
-image_size = Size(width = 1000, height = 1000)
+image_size = Size(width = 800, height = 800)
 no_horizontal_tiles = int(image_size.width / tile_size.width) 
 no_vertical_tiles = int(image_size.height / tile_size.height)
 
 try:
-    img = Image.open('logo-ferrari.jpg')
+    img = Image.open('rocket.png')
     img = img.convert('L')
     img = img.resize(image_size)
     # img.show()
